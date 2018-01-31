@@ -1,0 +1,6 @@
+framework module Pods_NexoParts {
+  umbrella header "Pods-NexoParts-umbrella.h"
+
+  export *
+  module * { export * }
+}
