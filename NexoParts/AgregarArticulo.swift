@@ -273,9 +273,13 @@ class AgregarArticulo : UIViewController {
         self.title = "Agregar Artículo"
         
         // removes the back title from back button of navigation bar
-        let barAppearace = UIBarButtonItem.appearance()
-        barAppearace.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
-    
+        //let barAppearace = UIBarButtonItem.appearance()
+        //barAppearace.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
+        
+        // hide back button from navigation bar
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
+        navigationItem.leftBarButtonItem = backButton
+        
         //create a new button
         let button: UIButton = UIButton(type: UIButtonType.custom)
         //set image for button

@@ -262,7 +262,7 @@ class OfferDetailsViewController : UIViewController, UITableViewDelegate, UITabl
                 print(response.result)
                 return
             }
-            print(response)
+            //print(response)
             if let responseData = response.data {
                 let json = JSON(data: responseData)
                 if let offerDetailsArray = json.array {

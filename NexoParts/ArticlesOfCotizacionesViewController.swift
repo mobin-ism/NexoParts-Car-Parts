@@ -79,9 +79,9 @@ class ArticlesOfCotizacionesViewController: UIViewController, UITableViewDelegat
         self.title = "Resumen De Cotizacíon"
         
         // removes the back title from back button of navigation bar
-        let barAppearace = UIBarButtonItem.appearance()
-        barAppearace.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
-    
+        //let barAppearace = UIBarButtonItem.appearance()
+        //barAppearace.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
+        
         //create a new button
         let button: UIButton = UIButton(type: UIButtonType.custom)
         //set image for button
@@ -94,6 +94,10 @@ class ArticlesOfCotizacionesViewController: UIViewController, UITableViewDelegat
         let barButton = UIBarButtonItem(customView: button)
         //assign button to navigationbar
         self.navigationItem.rightBarButtonItem = barButton
+        
+        // hide back button from navigation bar
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
+        navigationItem.leftBarButtonItem = backButton
     }
     func goToCart(){
         self.navigationController?.pushViewController(ListaDeComprasViewController(), animated: true)
